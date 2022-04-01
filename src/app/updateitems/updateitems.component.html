@@ -1,0 +1,32 @@
+<div class="mainInsidePanel">
+    <div class="updateItemsFrame">
+        <div class="selectedItemInfoFrame">
+            <div class="itemImageFrame">
+                <img src="assets/images/files.png" alt="" class="itemImage">
+            </div>
+            <div class="itemInfoFrame" style="flex-wrap: wrap;display: flex;">
+                <label for="" class="ifoText" style="text-align: center;" >
+                    Dosya Adı: {{file2.name}}<br><br>
+                    Dosya Uzantısı: {{file2.extention}} <br><br>
+                    Dosya boyutu: {{file2.size}}byte <br><br>
+                    Yüklenme Tarihi: {{file2.uploadTime}}
+                </label>
+            </div>
+        </div>
+        <form #updateFileForm = "ngForm" class="newValuesFrame">
+            <div class="inputsFrame">
+                <input placeholder="{{file2.name}}" (change)="onChangeEvent($event)" class="inputs" ngModel name = "fileName" >
+            </div>
+            <div class="buttonFrame">
+                <input type="submit" (click)="updateFile()" class="button" value="Güncelle">
+                <input type="submit" class="button" (click)="deleteFile()" value="Sil">
+                <input type="submit" class="button" (click) = "downloadFile()" value="İndir">
+                <input type="submit" class="button"  (click) ="generateLink()" value="Link Oluştur">
+            </div>
+            <div class="resultDiv" [style.opacity]="opacity" [style.background-color]="textColor">{{stateText}}</div>
+        </form>
+    </div>
+    <div class="link" [style.opacity] = "linkFrameOpacity">
+        {{link}}
+    </div>
+</div>

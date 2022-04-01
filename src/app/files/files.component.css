@@ -1,0 +1,47 @@
+.items{
+    height: 43%;
+    aspect-ratio: 1;
+    background-color:rgba(205, 255, 0, 0.02);
+    border-width: 1px;
+    border-color: rgba(205, 255, 0, 0.2);
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    border-top-right-radius: 20px;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 1.8%;
+}
+.items:hover{
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.itemImage{
+    height: 60%;
+    aspect-ratio: 1;
+}
+.itemName{
+    color: white;
+    font-family: 'Poppins', sans-serif,bold;
+    font-size:large;
+}
+.mainInsidePanel{
+    width: 85%;
+    height: 85%;
+    display: flex;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+    overflow:hidden;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+}
+.mainInsidePanel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .mainInsidePanel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

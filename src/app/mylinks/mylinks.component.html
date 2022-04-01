@@ -1,0 +1,15 @@
+<div class="mainInsidePanel">
+    <div class="linksContainer">
+        <div *ngFor="let link of links;let i index" class="linksFrame">
+            <div class="link">
+                https://localhost:44353/api/file/downloadWithLink?Link={{link.link}}
+            </div>
+            <div class="linkUsingTime">
+                {{link.usingTime}}
+            </div>
+            <button class="removeLink" (click)="removeLink(i)">
+                Sil
+            </button>
+        </div>
+    </div>
+</div>

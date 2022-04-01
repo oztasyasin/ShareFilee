@@ -1,0 +1,228 @@
+.topBar{
+    width: 100%;
+    background-color: black;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logoFrame{
+    height: 100%;
+    aspect-ratio: 5/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 3px;
+   
+}
+.logo{
+    height: 90%;
+    width: 90%;
+}
+.leftMenu{
+    position: absolute;
+    top: 70px;
+    height: 100%;
+    display: flex;
+    width: 23%;
+    min-width: 250px;
+    min-height: 500px;
+    flex-direction: column;
+  
+    background-color: black;
+}
+.logoutButton{
+    height: 65%;
+    aspect-ratio: 5/2;
+    border-radius: 10px;
+    border-width: 0ch;
+    background-color: transparent;
+    color:  rgba(205, 255, 0, 0.7);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+.buttonFrame{
+    display: flex;
+    height: 100%;
+    aspect-ratio: 5/2;
+    justify-content: center;
+    align-items: center;
+}
+.profileFrame{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.userPhotoFrame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    aspect-ratio: 1;
+    display: flex;
+}
+.userPhoto{
+    width: 80%;
+    height: 80%;
+}
+.userInfoFrame{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+.userInfo{
+    color: white;
+    font-family: 'Poppins', sans-serif,bold;
+    font-size: 18px;
+}
+.mainContent{
+    width: 100%;
+    flex: 1;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+    align-items: center;
+}
+.mainContent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .mainContent {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.selectionButton{
+    outline: none;
+    background-color: transparent;
+    border-width:  1px;
+    border-color:  rgba(205, 255, 0, 0.5);
+    border-left-width: 10px;
+    border-color: "rgba(255,255,255,0.4)";
+    margin-top: 10px;
+    width: 80%;
+    aspect-ratio: 5;
+    color: white;
+    font-family: 'Poppins', sans-serif,bold;
+    font-size:large;
+    border-left-color:rgba(255,255,255,0.4);
+    border-radius: 2px;
+    border-top-right-radius: 20px;
+}
+.selectionButton:hover{
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.mainPanel{
+    width: 77%;
+    position: absolute;
+    top: 70px;
+    height: 100%;
+    right: 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 500px;
+    min-width: 1000px;
+}
+.mainInsidePanel{
+    width: 85%;
+    height: 85%;
+    display: flex;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+    overflow:hidden;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+}
+.mainInsidePanel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .mainInsidePanel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.items{
+    height: 43%;
+    aspect-ratio: 1;
+    background-color:rgba(205, 255, 0, 0.02);
+    border-width: 1px;
+    border-color: rgba(205, 255, 0, 0.2);
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    border-top-right-radius: 20px;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 1.8%;
+}
+.items:hover{
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.itemImage{
+    height: 60%;
+    aspect-ratio: 1;
+}
+.itemName{
+    color: white;
+    font-family: 'Poppins', sans-serif,bold;
+    font-size:large;
+}
+.folderSubmenu{
+    transition: 0.1s;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+}
+.submenuItem{
+    margin-right: 10%;
+    outline: none;
+    background-color: transparent;
+    border-width: 0ch;
+    border-width:  1px;
+    border-left-width: 10px;
+    border-color: rgba(205, 255, 0, 0.5);
+    border-left-color: rgba(255,255,255,0.4);
+    margin-top: 1px;
+    width: 70%;
+    aspect-ratio: 7;
+    color: white;
+    font-family: 'Poppins', sans-serif,bold;
+    font-size:large;
+}
+.submenuItem:hover{
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.updateButtonFrame{
+
+    background-color: transparent;
+    border-width: 1px;
+    border-color: rgba(205, 255, 0, 0.2);
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+.updateButtonFrame:hover{
+    background-color: rgba(205, 255, 0, 0.2);
+}
+.updateButtonImage{
+    width: 60%;
+    height: 60%;
+}

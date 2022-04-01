@@ -1,0 +1,6 @@
+<div class="mainInsidePanel">
+    <button *ngFor="let folder of folders;let i = index" (dblclick)="folderSelected(folder)" class="items">
+        <img  src="assets/images/folder.png" alt="" class="itemImage">
+        <label for="" class="itemName">{{folder.folderName}}</label>
+    </button>
+</div>

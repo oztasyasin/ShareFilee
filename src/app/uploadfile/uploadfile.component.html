@@ -1,0 +1,40 @@
+<div class="mainInsidePanel">
+    <div class="updateItemsFrame">
+        <div class="selectedItemInfoFrame">
+            <div class="itemImageFrame">
+                <img src="assets/images/files.png" alt="" class="itemImage">
+            </div>
+            <div class="itemInfoFrame">
+                <label for="" class="ifoText">
+                    Dosya Adı: {{fileName}}<br><br>
+                    Dosya Uzantısı: {{fileExtention}} <br><br>
+                    Dosya boyutu: {{fileSize}}
+                </label>
+            </div>
+        </div>
+        <form class="newValuesFrame">
+            <div class="inputsFrame">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" style="color: white; cursor: pointer;">
+                        {{comboBoxText}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a *ngFor="let folder of folders" class="dropdown-item"
+                            (click)="dropdownSelectedItemChange(folder.folderName)">{{folder.folderName}}</a>
+                    </div>
+                </li>
+                <div class="button">
+                    <label class="label" for="upload-file">Dosya Seç</label>
+                </div>
+                <input type="file" id="upload-file" name="file" (change)="onFileSelected($event)" class="inputs">
+                
+            </div>
+            <div class="buttonFrame">
+    
+                <input type="submit" class="button" (click)="onUpload()" value="Kaydet">
+            </div>
+            <div class="resultDiv" [style.opacity]="opacity" [style.background-color]="textColor">{{stateText}}</div>
+        </form>
+    </div>
+</div>

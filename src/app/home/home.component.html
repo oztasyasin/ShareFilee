@@ -1,0 +1,46 @@
+<div class="fullsizeContainer" style="background-image: url('assets/images/bgImage.jpg');">
+    <div class="blur">
+        <div class="topBar">
+            <div class="logoFrame">
+                <img class="logo" src="assets/images/logoForDark.png" alt="">
+            </div>
+            <div class="buttonFrame">
+                <button (click)="logout()" class="logoutButton">
+                    Çıkış Yap
+                </button>
+            </div>
+        </div>
+        <div class="leftMenu">
+            <div class="profileFrame">
+                <div class="userPhotoFrame">
+                    <img src="assets/images/user.png" alt="" class="userPhoto">
+                </div>
+                <div class="userInfoFrame">
+                    <label for="" class="userInfo">{{userName}}</label>
+                </div>
+            </div>
+            <div class="mainContent">
+                <button class="selectionButton" [style.border-left-color] ="leftColors[0]" routerLink="showFolders"  (click)="showFolders()">
+                    Klasörleri Görüntüle
+                </button>
+                <button class="selectionButton" [style.border-left-color] ="leftColors[1]" routerLink="createNewFolder"  (click)="createNewFolder()">
+                    Klasör Oluştur
+                </button>
+                <button class="selectionButton" [style.border-left-color] ="leftColors[2]" routerLink="updateFolders"  (click)="updateFoldersClick()">
+                    Klasörleri Düzenle
+                </button>
+                <button class="selectionButton" [style.border-left-color] ="leftColors[3]" routerLink="uploadFile"  (click)="uploadFile()">
+                    Dosya Yükle
+                </button>
+                <button class="selectionButton" [style.border-left-color] ="leftColors[4]" routerLink="myLinks"  (click)="getMyLinks()">
+                    Linkler
+                </button>
+            </div>
+        </div>
+        <div class="mainPanel">
+            <div class="mainInsidePanel">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

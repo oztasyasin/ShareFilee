@@ -1,0 +1,16 @@
+<div class="mainInsidePanel">
+    <div class="updateItemsFrame">
+        <div class="selectedItemInfoFrame">
+            <div class="itemImageFrame">
+                <img src="assets/images/folder.png" alt="" class="itemImage">
+            </div>
+            <form #newFolderForm="ngForm" (ngSubmit)="newFolderEvent(newFolderForm)" class="itemInfoFrame" novalidate>
+                <input type="text" ngModel class="inputs" placeholder="Klasör Adı" name="folderName">
+                <input type="text" ngModel class="inputs" placeholder="Klasör Açıklaması" name="fodlerDescription">
+                <input type="submit" class="button" value="Oluştur">
+                <div class="resultDiv" [style.opacity]="opacity" [style.background-color]="textColor">{{stateText}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
